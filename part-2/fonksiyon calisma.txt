@@ -1,0 +1,34 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+double kare(double k)
+{
+    return k*k;
+}
+double kup(double x)
+{
+    return x*x*x;
+}
+double karekok(double kk)
+{
+    return sqrt(kk);
+}
+double uslu(double a,double b)
+{
+    return pow(a,b);
+}
+int main()
+{
+    setlocale(LC_ALL,"Turkish");
+    double sayi1,sayi2;cin>>sayi1>>sayi2;
+    cout<<sayi1<<" sayýsýnýn karesi:"
+    <<kare(sayi1)<<endl;
+    cout<<sayi2<<" sayýsýnýn karesi: "<<kare(sayi2)<<endl;
+    cout<<sayi1<<" sayýsýýnýn küpü: "<<kup(sayi1)<<endl;
+    cout<<sayi2<<" sayýsýnýn küpü: "<<kup(sayi2)<<endl;
+    cout<<sayi1<<" sayýsýnýn karekökü: "<<karekok(sayi1)<<endl;
+    cout<<sayi2<<" sayýsýnýn karekökü: "<<karekok(sayi2)<<endl;
+    cout<<sayi1<<"'in "<<sayi2<<"'nci kuvveti: "<<uslu(sayi1,sayi2)<<endl;
+
+    return 0;
+}
