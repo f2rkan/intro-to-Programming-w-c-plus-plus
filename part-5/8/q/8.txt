@@ -1,0 +1,50 @@
+1. Normalde bir argümanı, bir string'n adresini alan ve bu string'i bir kez basan bir fonksiyon yazın. Ancak, ikinci bir int türü argümanı sağlanırsa ve sıfırdan farklıysa, fonksiyon, string'i, o noktada o fonksiyonun çağrılma sayısına eşit sayıda yazdırmalıdır. (String'in yazdırılma sayısının ikinci argümanın değerine eşit olmadığını; fonksiyonun çağrılma sayısına eşit olduğunu unutmayın.)
+
+2. CandyBar struct'ı 3 üye içerir. ilk üye bir marka adı, ikinci üye şeker çubuğunun ağırlıgı(kesirli olabilir) ve üçüncü üye, şeker çubugundaki kalori sayisini(tamsayı degeri) tutar. Argüman olarak CandyBar char pointerı, double ve int için referans alan bir fonksiyon kullanan bir program yaz. Son üç argüman, varsayılan olarak "Millennium Munch", 2.85 ve 350 değerlerine sahip olmalıdır. Ayrıca program, argüman olarak bir CandyBar'a referans alan ve struct'ın içeriğini görüntüleyen bir fonksiyon kullanmalıdır. Uygun oladuugnda const kullan.
+
+3. Bir dize nesnesine parametre olarak başvuru alan ve dizenin içeriğini büyük harfe dönüştüren bir işlev yazın. Bölüm 6, Tablo 6.4'te açıklanan toupper () işlevini kullanın. İşlevi farklı girdilerle test etmenizi sağlayan bir döngü kullanan bir program yazın. Örnek bir çalışma şöyle görünebilir:
+
+Enter a string (q to quit): go away
+GO AWAY
+Next string (q to quit): good grief!
+GOOD GRIEF!
+Next string (q to quit): q
+Bye.
+
+4. Aşağıdaki bir program iskeleti:
+
+#include <iostream>
+using namespace std;
+#include <cstring> 	// for strlen(), strcpy()
+struct stringy {
+char * str; 		// points to a string
+int ct; 		// length of string (not counting '\0')
+};
+// prototypes for set(), show(), and show() go here
+int main()
+{
+stringy beany;
+char testing[] = "Reality isn't what it used to be.";
+set(beany, testing); // first argument is a reference,
+// allocates space to hold copy of testing,
+// sets str member of beany to point to the
+// new block, copies testing to new block,
+// and sets ct member of beany 
+show(beany); // prints member string once
+show(beany, 2); // prints member string twice
+testing[0] = 'D';
+testing[1] = 'u';
+show(testing); // prints testing string once
+show(testing, 3); // prints testing string thrice
+show("Done!");
+return 0;
+}
+
+Açıklanan işlevleri ve prototipleri sağlayarak bu iskeleti tamamlayın. Her biri varsayılan bağımsız değişkenler kullanan iki show () işlevi olması gerektiğini unutmayın. Uygun olduğunda const bağımsız değişkenlerini kullanın. Set () işlevinin, belirtilen dizeyi tutmak için yeterli alan ayırmak için new kullanması gerektiğini unutmayın. Burada kullanılan teknikler sınıf tasarlama ve uygulamada kullanılan tekniklere benzer. (Derleyici dosyalarınıza bağlı olarak başlık dosya adlarını değiştirmeniz ve kullanma yönergesini silmeniz gerekebilir.)
+
+
+5. Argüman olarak, T türündeki beş öğeden oluşan bir dizi alan ve dizideki en büyük öğeyi döndüren max5 () şablon işlevini yazın. (Boyut sabit olduğundan, bağımsız değişken olarak iletilmek yerine döngüye sabit olarak kodlanabilir.) Beş 'int' değeri ve beş 'double dizisiyle işlevi kullanan bir programda test edin 'değerleri.
+
+6. Argüman olarak, T türünde bir öğe dizisi ve dizideki öğe sayısını temsil eden ve dizideki en büyük öğeyi döndüren bir tamsayı alan bir şablon işlevi maxn () yazın. Altı ‘int 'değeri ve dört double değeri içeren bir dizi işlev şablonunu kullanan bir programda test edin. Program ayrıca bir argüman olarak char pointerı ve ikinci bir argüman olarak pointer sayısını alan ve en uzun string'in adresini döndüren bir uzmanlık içermelidir. En uzun uzunluğa sahip olmak için birden fazla string bağlıysa, işlev en uzun bağlanan ilk dizinin adresini döndürmelidir. Uzmanlığı beş dize işaretçisi dizisiyle test edin.
+
+7. Listeyi 8.14, içeriği görüntülemek yerine dizi içeriğinin toplamını döndürmek için SumArray () adlı iki şablon işlevini kullanacak şekilde değiştirin. Program şimdi toplam şey sayısını ve tüm borçların toplamını rapor etmelidir.

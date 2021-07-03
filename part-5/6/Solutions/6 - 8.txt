@@ -1,0 +1,37 @@
+#include<iostream>
+#include<fstream>
+#include<cstdlib>
+
+using namespace std;
+
+int main(void)
+{
+    cout << "dosya adini gir: ";
+    char filename[100]; cin.getline(filename, 100);
+
+    ifstream inFile;
+    inFile.open(filename);
+
+    if(!inFile.is_open())
+    {
+        cout << "dosyana ulasilamadi." << endl << "program sonlandi" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    char ch;
+    int karakter = 0;
+
+    inFile >> ch;
+
+    while(!inFile.eof())
+    {
+        karakter++;
+        inFile >> ch;
+    }
+
+    cout << filename << " dosyasinda toplam " << karakter << " karakter var." << endl;
+    cout << "bYe -" << endl;
+
+    inFile.close();
+    return 0;
+}

@@ -1,0 +1,28 @@
+1. Kullanıcıdan iki tamsayı girmesini isteyen bir program yazın. Program daha sonra, iki tamsayı arasındaki ve dahil olmak üzere tüm tamsayıların toplamını hesaplamalı ve rapor etmelidir. Bu noktada, önce daha küçük tamsayının girildiğini varsayın. Örneğin, kullanıcı 2 ve 9 girerse, program 2'den 9'a kadar olan tam sayıların toplamının 44 olduğunu bildirmelidir.
+
+2. asagıdaki kodu array nesnesiyle yap, long double yerine long long degisken tipini kullan ve 100 degerini bul:
+
+#include <iostream>
+const int ArSize = 16;
+int main()
+{
+long long factorials[ArSize];
+factorials[1] = factorials[0] = 1LL;
+for (int i = 2; i < ArSize; i++)
+factorials[i] = i * factorials[i-1];
+for (int i = 0; i < ArSize; i++)
+std::cout << i << "! = " << factorials[i] << std::endl;
+return 0;
+}
+
+3. Kullanıcıdan sayı yazmasını isteyen bir program yazın. Her girişten sonra, program bugüne kadarki girişlerin toplamını rapor etmelidir. Kullanıcı 0'a girdiğinde program sonlandırılmalıdır.
+
+4. Daphne% 10 basit faizle 100 $ yatırım yapıyor. Yani, her yıl yatırım orijinal yatırımın% 10'unu veya her yıl 10 $ kazanır:
+
+faiz = 0,05 × cari denge
+
+Cleo ilk yıl 100 doların% 5'ini kazanarak ona 105 dolar verirken, ertesi yıl 105 doların% 5'ini veya 5.25 dolarını kazanır. Cleo’nun yatırım değerinin Daphne’nin yatırım değerini aşmasının kaç yıl sürdüğünü bulan ve daha sonra her iki yatırımın değerini de gösteren bir program yazın
+
+5. Aptallar için C ++ kitabını satıyorsunuz. Bir yıllık aylık satış girdiğiniz bir program yazın (para değil, kitap sayısı açısından). Program, ay dizelerine başlatılmış bir char * dizisi (veya isterseniz bir dizi dize nesnesi dizisi) kullanarak ve aygıta girdi verilerini bir int dizisinde saklayarak ay bazında bilgi istemek için bir döngü kullanmalıdır. Ardından, program dizi içeriğinin toplamını bulmalı ve yıl için toplam satışları rapor etmelidir.
+
+6. Yukarıdaki kodu tekrar yaz, ancak girdiyi 3 yıllık aylık satışlar için depolamak için iki boyutlu bir dizi kullanın. Her bir yıllık ve birleştirilmiş yıllar için toplam satışları bildirin.

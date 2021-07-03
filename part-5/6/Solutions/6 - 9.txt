@@ -1,0 +1,74 @@
+#include<iostream>
+#include<fstream>
+#include<cstdlib>
+using namespace std;
+
+struct donation
+{
+    string name;
+    double amouth;
+};
+
+int main(void)
+{
+    cout << "dosya adini gir: ";
+    ifstream inFile;
+
+    char file[100]; cin.getline(file, 100);
+
+    inFile.open(file);
+
+
+
+    if(!inFile.is_open())
+
+    {
+       cout << "dosyana ulasilamadi." << endl << "program sonlandi." << endl;
+       exit(EXIT_FAILURE);
+    }
+
+    int donor_number; inFile >> donor_number; inFile.get();
+
+    donation * list = new donation[donor_number];
+    int donationSizes[donor_number];
+
+
+    for(int i = 0; i < donor_number; i++)
+    {
+        inFile >> (list+i) -> name;
+        inFile >> (list+i) -> amouth;
+        inFile.get();
+
+        if((list+i) -> amouth >= 10000) donationSizes[i] = 1;
+        else donationSizes[i] = 0;
+    }
+
+    cout << "list of grand patrons!" << endl;
+    int counter = 0;
+
+    for(int i = 0; i < donor_number; i++)
+    {
+        if(donationSizes[i] == 1)
+        {
+            cout << (list+i) -> name << ", $" << (list+i) -> amouth << endl;
+            counter = 1;
+        }
+    }
+    if(!counter) cout << "None." << endl; counter = 0;
+
+    cout << "list of remaining patrons" << endl;
+
+    for(int i = 0; i < donor_number; i++)
+    {
+        if(donationSizes[i] == 0)
+        {
+            cout << (list+i) -> name << endl;
+            counter = 1;
+        }
+    }
+    if(!counter) cout << "None." << endl;
+
+    inFile.close();
+
+    return 0;
+}

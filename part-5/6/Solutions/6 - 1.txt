@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cctype>
+
+
+char quit = 'q';
+
+using namespace std;
+
+int main(void)
+{
+   char ch;
+   cin.get(ch);
+
+   while(cin.good() && ch != '@')
+   {
+       if(isdigit(ch))
+       {
+           cin.ignore(1000, '\n');
+           cin.get(ch);
+       }
+       else if(isupper(ch)) ch = tolower(ch);
+       else if(islower(ch)) ch = toupper(ch);
+
+       cout << ch;
+       cin.get(ch);
+
+   }
+   cout << "bYE!" << endl;
+   return 0;
+}

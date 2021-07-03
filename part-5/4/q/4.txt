@@ -1,0 +1,59 @@
+1. aşağıdaki çıktı örneğinde gösterildiği gibi bilgi isteyen ve görüntüleyen bir c++ programı yaz:
+
+What is your first name? Betty Sue
+What is your last name? Yewe
+What letter grade do you deserve? B
+What is your age? 22
+Name: Yewe, Betty Sue
+Grade: C
+Age: 22
+
+Programın birden fazla kelime içeren adları kabul edebilmesi gerektiğini unutma. Ayrıca programın noty aşağıya, yani bir harfe ayarlandıgını unutma. D ve F arasındaki bosluk konusunda endise etmemek icin kullanıcının A veya C istedigini varsayalım.
+
+2. char dizileri yerine c++ string sınıfını kullanarak asagıdaki kodu yeniden yaz:
+
+#include <iostream>
+int main()
+{
+using namespace std;
+const int ArSize = 20;
+char name[ArSize];
+char dessert[ArSize];
+cout << "Enter your name:\n";
+cin.getline(name, ArSize); // reads through newline
+cout << "Enter your favorite dessert:\n";
+cin.getline(dessert, ArSize);
+cout << "I have some delicious " << dessert;
+cout << " for you, " << name << ".\n";
+return 0;
+}
+
+3. kullanıcıdan önce adını, ardından soyadını girmesini isteyen ve daha sonra kullanıcının soyadının ardından virgül, boşluk ve ismi içeren üçüncü bir string olusturan; sakyan ve goruntuleyen bir program yazın. cstring baslık dosyasındaki karakter dizilerini ve işlevlerini kullanın. örnek bir çalışma şöyle görünebilir:
+
+Enter your first name: Flip
+Enter your last name: Fleming
+Here’s the information in a single string: Fleming, Flip
+
+4. kullanıcıdan önce adını, ardından soyadını girmesini isteyen ve daha sonra kullanıcının soyadından sonra bir virgül, boşluk ve ad içeren üçüncü bir string oluşturan, saklayan ve görüntüleyen bir program yazın. dize başlık dosyasındaki dize nesnelerini ve yöntemlerini kullanın. örnek bir çalışma şöyle görünebilir:
+
+Enter your first name: Flip
+Enter your last name: Fleming
+Here’s the information in a single string: Fleming, Flip
+
+5. CandyBar structure'ı üç üye içerir: ilk üye bir şekerleme çubuğunun marka adını taşıyor; ikinci eleman, şeker çubuğunun ağırlığını (kesirli bir parçasına sahip olabilen) tutar ve üçüncü üye şeker çubuğundaki kalori sayısını (bir tam sayı değeri) tutar. böyle bir structure'ı ilan eden ve üyelerini sırayla "Mocha Munch", 2,3 ve 350 olarak başlatan snack adında bir CandyBar değişkeni oluşturan bir program yazın. Başlatma, çerez beyanının bir parçası olmalıdır. Son olarak, program çerez değişkeninin içeriğini göstermelidir.
+
+6. CandyBar yapısı, Programlama Alıştırması 5'te açıklandığı gibi üç üye içerir. Üç CandyBar yapısı dizisi oluşturan, bunları seçtiğiniz değerlere başlatan ve ardından her yapının içeriğini görüntüleyen bir program yazın.
+
+7. William Wingate bir pizza analiz servisi yürütmektedir. Her pizza için aşağıdaki bilgileri kaydetmesi gerekir:
+
+-Birden fazla kelimeden oluşabilecek pizza şirketinin adı
+-Pizza çapı
+-Pizza ağırlığı
+
+Bu bilgileri tutabilecek bir yapı tasarlayın ve bu tür bir yapı değişkeni kullanan bir program yazın. Program kullanıcıdan önceki bilgi öğelerinin her birini girmesini istemeli ve ardından program bu bilgileri görüntülemelidir. Cin (veya yöntemlerini) ve cout kullanın.
+
+8. Programlama Alıştırması 7 yapın, ancak bir yapı değişkeni bildirmek yerine yeni bir yapı atamak için kullanın. Ayrıca programın pizza şirketi adını istemeden önce pizza çapını talep etmesini sağlayın.
+
+9. Programlama Alıştırması 6 yapın, ancak üç CandyBar yapısı dizisini bildirmek yerine diziyi dinamik olarak ayırmak için new kullanın
+
+10. Kullanıcının 40 yd tire (veya isterseniz 40 metre) için üç kez girmesini isteyen ve ardından süreleri ve ortalamayı gösteren bir program yazın. Verileri tutmak için bir dizi nesnesi kullanın. (Dizi yoksa yerleşik bir dizi kullanın.)

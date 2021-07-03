@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+
+int main(void)
+{
+    using namespace std;
+    string word;
+    cout << "metin girmeye basla, done girersen program sonlanir\n";
+    int count = 0;
+    while(cin >> word && word != "done")
+    {
+        count++;
+    }
+    cout << "toplam girilen kelime sayisi: " << count << endl;
+
+    return 0;
+}
+
+
+
+#include<iostream>
+#include<string>
+
+int main(void)
+{
+    using namespace std;
+    string word;
+    string delimiter = "done";
+
+    cout << "sozcuk girisine basla, done girersen program sonlanir.\n";
+    cin >> word;
+    int count = 0;
+    while(word != delimiter)
+    {
+        count++;
+        cin >> word;
+    }
+    cout << "toplam girilen sozcuk sayisi: " << count << endl;
+
+    return 0;
+}

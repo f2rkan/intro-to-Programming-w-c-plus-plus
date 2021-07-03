@@ -1,0 +1,17 @@
+1 - @ karakteri ile giriş sonlanır, girilen küçük harfleri büyük harfe; büyük harfleri küçük harfe çevirir. (cctype headerı ile yap).
+
+2- double dizisi olustur, 10'a kadar bagıs degerlerini okusun, sayısal olmayan giriste program sonlanmalı, girilen bagısların ortalaması bildirilmeli, ortalama ustu bagısları ekrana yazmalı.
+
+
+3- menü uygulaması yaz, program, her biri bir harf ile etiketlenmiş 4 seçenekten oluşsun; kullanıcı 4 seçenekten birini seçtiğinde bir metin çıktılansın; mevcut secenekler dışı giriş yapılırsa, program, mevcut seceneklerin secilmesi konusunda ısrarcı olsun.
+
+
+4- bopname adında bir struct olustur, struct'ın icinde char tipinde fullname, title, bopname(takma ad) ve integer tipinde bi degisken olsun. bunu bir supstruct ile doldur, kullanıcı secenekler arasından sıralama sekli secsin; int tipini secerse ona göre bir sıralama yapsın.
+
+6- bir bağış programı hazırla. kullanıcı, bağışta bulunanların önce sayısını girmeli, sonra her katılımcının önce adını sonra katkı yaptıgı para miktarını al. bilgileri dinamik bir diziye tanımlanmıs struct'ta sakla. her struct 2 üyeye sahip olmalı: isim saklamak icin bir char dizisi, katkı yapılan para için double degiskeni. tüm veri okunduktan sonra program, 10000 doların üzerinde katkı yapanların adını ve katkı yaptıgı para miktarını yazsın, sonra list of remaning patrons yazıp diger bagıscıların adını yazsın. bu kategorilerde bagıs yapan yoksa None yazılsın. programın bagısları büyükten kucuge sıralamasına gerek yok.
+
+7- q girilene kadar bir kerede giriş kelimesini okuyan program yaz. program, kelimeyi aldıktan sonra sesli harfle baslayan kelimeleri, sessiz harfle baslayan kelimeleri ve bu kategoriden olmayan kelimeleri rapor etmeli. 
+
+8 - bir metin dosyası açan ve onun karakterlerini okuyup sayısını çıktılayan program yaz.
+
+9 - örnek 6'yı uygula ama verileri klavyeden degil bir dosyadan al.

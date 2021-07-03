@@ -1,0 +1,1 @@
+Bölüm İnceleme Soru 5'te açıklanan sınıf için yöntem tanımları sağlayın ve tüm özellikleri gösteren kısa bir program yazın.

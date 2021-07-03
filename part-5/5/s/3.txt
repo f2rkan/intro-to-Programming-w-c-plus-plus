@@ -1,0 +1,18 @@
+#include<iostream>
+
+int main(void)
+{
+    using namespace std;
+    int a;
+    int sum = 0;
+
+    while(cin >> a && a != 0)
+    {
+        sum += a;
+    }
+    cout << "girdigin tum sayilarin toplami: " << sum << endl;
+    cout << "Bye!" << endl;
+
+    return 0;
+    
+}
