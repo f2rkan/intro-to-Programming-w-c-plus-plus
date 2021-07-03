@@ -1,0 +1,76 @@
+#include<iostream>
+using namespace std;
+
+union data
+{
+    int a;
+    int d;
+    float b;
+
+    char c[40];
+};
+struct ogrenci
+{
+      string ad;
+      string soyad;
+      int ogr_no;
+      int puanlar[3];
+
+      struct
+      {
+          string ders_ad;
+          int kredi;
+      }ders;
+      
+}o3;
+
+int main(void)
+{
+    ogrenci o1 = {"Ali", "Yilmaz", 435, {50, 60, 80}};
+
+    o1.ders.ders_ad = "Programlama";
+
+    ogrenci o2 = {"Ayse", "Yilmaz", 437, {40, 50, 60}};
+    o2.ders.kredi = 7;
+
+    ogrenci * o3 = &o1;
+
+    struct ogrenci sinif[2];
+  
+
+    cout << o1.ad << endl;
+    cout << o2.ad << endl;
+    cout << o1.puanlar[0] << endl;
+    cout << o3 -> ad << endl;
+
+    cout << endl << endl;
+    cout << o2.ders.kredi << endl << o1.ders.ders_ad << endl;
+    
+    sinif[0].ad = "A";
+    sinif[0].soyad = "B";
+
+    sinif[1].ad = "C";
+    sinif[1].soyad = "D";
+
+    cout << endl << endl << sinif[0].ad << endl;
+
+    data d1;
+    d1.a = 5;
+
+    cout << "d1 a: " << d1.a << endl;
+    cout << "d1 b: " << d1.b << endl;
+    cout << "d1 c" << d1.c << endl;
+    cout << "d1 d" << d1.d << endl;
+
+    cout << "**************" << endl;
+
+    d1.b = 3.14;
+
+    cout << "d1 a: " << d1.a << endl;
+    cout << "d1 b: " << d1.b << endl;
+    cout << "d1 c: " << d1.c << endl;
+    cout << "d1 d: " << d1.d << endl;
+
+    cout << sizeof(d1) << endl;
+    return 0;
+}
